@@ -34,7 +34,7 @@ final class AttackDamage {
         double[] sum = new double[]{0.0};
         item.applyAttributeModifiers(EquipmentSlot.MAINHAND, (attribute, modifier) -> {
             if (EntityAttributes.ATTACK_DAMAGE.equals(attribute)) {
-                sum[0] = sum[0] + modifier.comp_2449();
+                sum[0] = sum[0] + modifier.value();
             }
         });
         return sum[0];
