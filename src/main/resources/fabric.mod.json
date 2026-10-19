@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "marlowcrystal",
+  "version": "${version}",
+  "name": "802 Crystal Reflex",
+  "description": "Client-side crystal, input and totem responsiveness toolkit for Minecraft 1.21.11. Based on Marlow's Crystal Optimizer (MIT) and Coco802 Crystal Reflex (MIT).",
+  "authors": ["Coco802", "Bram", "Marlow"],
+  "license": "MIT",
+  "icon": "assets/coco802-crystal-reflex/icon.png",
+  "environment": "client",
+  "entrypoints": { "client": ["com.deathmotion.marlowcrystal.loader.fabric.MarlowCrystalFabric"] },
+  "mixins": ["MarlowCrystal.mixins.json"],
+  "depends": { "fabricloader": ">=0.17.3", "minecraft": "1.21.11", "java": ">=21", "fabric-api": "*" }
+}
