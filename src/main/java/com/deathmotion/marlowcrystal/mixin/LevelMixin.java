@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public abstract class LevelMixin {
     @ModifyVariable(method={"getOtherEntities(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/Box;Ljava/util/function/Predicate;)Ljava/util/List;"}, at=@At(value="HEAD"), argsOnly=true)
     private Predicate<? super Entity> marlowcrystal$hideKeptCrystals(Predicate<? super Entity> predicate) {
-        if (!((World)this).isClient()) {
+        if (!((World)(Object)this).isClient()) {
             return predicate;
         }
         return MarlowCrystal.get().keptCrystals().hide(predicate);
